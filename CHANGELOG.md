@@ -9,6 +9,7 @@
 * Improved retrieving or pointwise log likelihood in `from_cmdstanpy`, `from_cmdstan` and `from_pystan` ([1579](https://github.com/arviz-devs/arviz/pull/1579) and [1599](https://github.com/arviz-devs/arviz/pull/1599))
 * Added interactive legend to bokeh `forestplot` ([1591](https://github.com/arviz-devs/arviz/pull/1591))
 * Added interactive legend to bokeh `ppcplot` ([1602](https://github.com/arviz-devs/arviz/pull/1602))
+* Added `data.log_likelihood`, `stats.ic_compare_method` and `plot.density_kind` to `rcParams` ([1611](https://github.com/arviz-devs/arviz/pull/1611))
 
 ### Maintenance and fixes
 * Enforced using coordinate values as default labels ([1201](https://github.com/arviz-devs/arviz/pull/1201))
@@ -25,12 +26,14 @@
 * Fix `ess/rhat` plots in `plot_forest` ([1606](https://github.com/arviz-devs/arviz/pull/1606))
 * Fix `from_numpyro` crash when importing model with `thinning=x` for `x > 1` ([1619](https://github.com/arviz-devs/arviz/pull/1619))
 * Upload updated mypy.ini in ci if mypy copilot fails ([1624](https://github.com/arviz-devs/arviz/pull/1624))
+* Added type checking to raise an error whenever `InferenceData` object is passed using `io_pymc3`'s `trace` argument ([1629](https://github.com/arviz-devs/arviz/pull/1629))
+* Fix `xlabels` in `plot_elpd` ([1601](https://github.com/arviz-devs/arviz/pull/1601))
 
 ### Deprecation
 * Deprecated `index_origin` and `order` arguments in `az.summary` ([1201](https://github.com/arviz-devs/arviz/pull/1201))
 
 ### Documentation
-* Added "Label guide" page and API section for `arviz.labels` module ([1201](https://github.com/arviz-devs/arviz/pull/1201))
+* Added "Label guide" page and API section for `arviz.labels` module ([1201](https://github.com/arviz-devs/arviz/pull/1201) and [1635](https://github.com/arviz-devs/arviz/pull/1635))
 * Add "Installation guide" page to the documentation ([1551](https://github.com/arviz-devs/arviz/pull/1551))
 * Improve documentation on experimental `SamplingWrapper` classes ([1582](https://github.com/arviz-devs/arviz/pull/1582))
 
