@@ -1,3 +1,4 @@
+# pylint: disable=too-many-instance-attributes,too-many-arguments
 """Base class for sampling wrappers."""
 from xarray import apply_ufunc
 
@@ -12,8 +13,8 @@ class SamplingWrapper:
     functions requiring refitting like Leave Future Out or Simulation Based Calibration can be
     performed from ArviZ.
 
-    See other SamplingWrapper classes at :ref:`wrappers api section <wrappers_api>`. For
-    usage examples see user guide pages on :ref:`wrapper_guide`.
+    For usage examples see user guide pages on :ref:`wrapper_guide`.See other
+    SamplingWrapper classes at :ref:`wrappers api section <wrappers_api>`.
 
     Parameters
     ----------
@@ -230,11 +231,9 @@ class SamplingWrapper:
             if method in supported_methods_1arg:
                 if self._check_method_is_implemented(method, 1):
                     continue
-                else:
-                    not_implemented.append(method)
+                not_implemented.append(method)
             elif method in supported_methods_2args:
                 if self._check_method_is_implemented(method, 1, 1):
                     continue
-                else:
-                    not_implemented.append(method)
+                not_implemented.append(method)
         return not_implemented
